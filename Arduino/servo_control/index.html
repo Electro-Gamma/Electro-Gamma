@@ -6,15 +6,15 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Linux ,Open Source Software ,Open Source Hardware and Electronic.">
+        <meta name="description" content="Control a servo motor using Arduino.">
       
       
         <meta name="author" content="Moon3ix">
       
       
       
+        <link rel="prev" href="../pwm_control/">
       
-        <link rel="next" href="Tutorials/Arduino%20Blink/">
       
       
       <link rel="icon" href="/Electro-Gamma/assets/logo.png">
@@ -22,14 +22,14 @@
     
     
       
-        <title>Electro-Gamma</title>
+        <title>Arduino Servo Control Example - Electro-Gamma</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.66ac8b77.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,9 +48,9 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome_to_electro_gamma" class="md-skip">
+        <a href="#arduino_servo_control_example" class="md-skip">
           Skip to content
         </a>
       
@@ -92,7 +92,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Electro-Gamma" class="md-header__button md-logo" aria-label="Electro-Gamma" data-md-component="logo">
+    <a href="../.." title="Electro-Gamma" class="md-header__button md-logo" aria-label="Electro-Gamma" data-md-component="logo">
       
   <img src="/Electro-Gamma/assets/logo-white.png" alt="logo">
 
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Arduino Servo Control Example
             
           </span>
         </div>
@@ -224,7 +224,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Electro-Gamma" class="md-nav__button md-logo" aria-label="Electro-Gamma" data-md-component="logo">
+    <a href="../.." title="Electro-Gamma" class="md-nav__button md-logo" aria-label="Electro-Gamma" data-md-component="logo">
       
   <img src="/Electro-Gamma/assets/logo-white.png" alt="logo">
 
@@ -250,28 +250,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Home
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -280,119 +262,6 @@
   
 
       </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#welcome_to_electro_gamma" class="md-nav__link">
-    <span class="md-ellipsis">
-      Welcome to Electro Gamma
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Welcome to Electro Gamma">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#our_focus" class="md-nav__link">
-    <span class="md-ellipsis">
-      Our Focus
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Our Focus">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1_linux_and_open_source_software" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Linux and Open Source Software
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2_open_source_hardware" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Open Source Hardware
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3_electronics_and_diy_projects" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Electronics and DIY Projects
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4_community_and_collaboration" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Community and Collaboration
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#check_out_our_youtube_channel" class="md-nav__link">
-    <span class="md-ellipsis">
-      Check Out Our YouTube Channel
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#join_us" class="md-nav__link">
-    <span class="md-ellipsis">
-      Join Us
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#latest_posts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Latest Posts
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -443,7 +312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Tutorials/Arduino%20Blink/" class="md-nav__link">
+      <a href="../../Tutorials/Arduino%20Blink/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -510,7 +379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Projects/Router-Scripts/" class="md-nav__link">
+      <a href="../../Projects/Router-Scripts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -535,8 +404,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -555,11 +426,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -573,7 +444,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Arduino
@@ -587,7 +458,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Arduino/blink/" class="md-nav__link">
+      <a href="../blink/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -608,7 +479,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Arduino/fade/" class="md-nav__link">
+      <a href="../fade/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -629,7 +500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Arduino/button_press/" class="md-nav__link">
+      <a href="../button_press/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -650,7 +521,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Arduino/analog_read/" class="md-nav__link">
+      <a href="../analog_read/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -671,7 +542,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Arduino/pwm_control/" class="md-nav__link">
+      <a href="../pwm_control/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -689,10 +560,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="Arduino/servo_control/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Arduino Servo Control Example
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -701,6 +590,74 @@
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#arduino_servo_control_example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arduino Servo Control Example
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Arduino Servo Control Example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#explanation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explanation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional_notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Notes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -740,56 +697,38 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#welcome_to_electro_gamma" class="md-nav__link">
+  <a href="#arduino_servo_control_example" class="md-nav__link">
     <span class="md-ellipsis">
-      Welcome to Electro Gamma
+      Arduino Servo Control Example
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Welcome to Electro Gamma">
+    <nav class="md-nav" aria-label="Arduino Servo Control Example">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#our_focus" class="md-nav__link">
+  <a href="#code" class="md-nav__link">
     <span class="md-ellipsis">
-      Our Focus
+      Code
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Our Focus">
+    <nav class="md-nav" aria-label="Code">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1_linux_and_open_source_software" class="md-nav__link">
+  <a href="#explanation" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Linux and Open Source Software
+      Explanation
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2_open_source_hardware" class="md-nav__link">
+  <a href="#additional_notes" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Open Source Hardware
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3_electronics_and_diy_projects" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Electronics and DIY Projects
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4_community_and_collaboration" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Community and Collaboration
+      Additional Notes
     </span>
   </a>
   
@@ -797,33 +736,6 @@
         
       </ul>
     </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#check_out_our_youtube_channel" class="md-nav__link">
-    <span class="md-ellipsis">
-      Check Out Our YouTube Channel
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#join_us" class="md-nav__link">
-    <span class="md-ellipsis">
-      Join Us
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#latest_posts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Latest Posts
-    </span>
-  </a>
   
 </li>
         
@@ -844,58 +756,74 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-                  
-
+  <h1>Arduino Servo Control Example</h1>
+  <p>
+    <b>Control a servo motor using Arduino.</b>
+  </p>
+  <aside class="mdx-author">
   
+    <p>
+      <img alt=Moon3ix src=/Electro-Gamma/assets/author.png>
+    </p>
   
+  <p>
+    <span>
+      
+        <strong>Moon3ix</strong>
+         ·
+      
+      
+    </span>
+    <span>
+      <span class="twemoji">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.75 0a.75.75 0 0 1 .75.75V3h9V.75a.75.75 0 0 1 1.5 0V3h2.75c.966 0 1.75.784 1.75 1.75v16a1.75 1.75 0 0 1-1.75 1.75H3.25a1.75 1.75 0 0 1-1.75-1.75v-16C1.5 3.784 2.284 3 3.25 3H6V.75A.75.75 0 0 1 6.75 0ZM21 9.5H3v11.25c0 .138.112.25.25.25h17.5a.25.25 0 0 0 .25-.25Zm-17.75-5a.25.25 0 0 0-.25.25V8h18V4.75a.25.25 0 0 0-.25-.25Z"/></svg>
+      </span>
+      September 13, 2024 ·
+      <span class="twemoji">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.5 7.25a.75.75 0 0 0-1.5 0v5.5c0 .27.144.518.378.651l3.5 2a.75.75 0 0 0 .744-1.302L12.5 12.315V7.25Z"/><path d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1ZM2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5 9.5 9.5 0 0 0 2.5 12Z"/></svg>
+      </span>
+      <!--Min reading time is 1 minute-->
+      
+      
+      2 min read
+    </span>
+  </p>
+</aside>
+  <hr>
+  <div><h3 id="arduino_servo_control_example">Arduino Servo Control Example<a class="headerlink" href="#arduino_servo_control_example" title="Permanent link">⚓︎</a></h3>
+<p>This example shows how to control a servo motor using Arduino. The servo sweeps back and forth.</p>
+<h4 id="code">Code<a class="headerlink" href="#code" title="Permanent link">⚓︎</a></h4>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Servo.h&gt;</span>
 
+<span class="n">Servo</span><span class="w"> </span><span class="n">myServo</span><span class="p">;</span><span class="w"> </span><span class="c1">// create a Servo object</span>
 
-  <h1>Home</h1>
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">myServo</span><span class="p">.</span><span class="n">attach</span><span class="p">(</span><span class="mi">9</span><span class="p">);</span><span class="w"> </span><span class="c1">// pin connected to the servo</span>
+<span class="p">}</span>
 
-<div><h3 id="welcome_to_electro_gamma">Welcome to Electro Gamma<a class="headerlink" href="#welcome_to_electro_gamma" title="Permanent link">⚓︎</a></h3>
-<p>At Electro Gamma, we are passionate about <strong>Linux</strong>, <strong>Open Source Software</strong>, <strong>Open Source Hardware</strong>, and the exciting world of electronics. Whether you are a developer, maker, or enthusiast, we provide a variety of tutorials, resources, and guides to help you explore and build with open technologies. </p>
-<h4 id="our_focus">Our Focus<a class="headerlink" href="#our_focus" title="Permanent link">⚓︎</a></h4>
-<p>We cover a range of topics to cater to beginners and advanced users alike:</p>
-<h5 id="1_linux_and_open_source_software">1. Linux and Open Source Software<a class="headerlink" href="#1_linux_and_open_source_software" title="Permanent link">⚓︎</a></h5>
-<p>Linux is the foundation of our work, and we believe in the power of open source to foster innovation. Our tutorials help you:
-- <strong>Install and configure Linux</strong> on various devices, including desktops, laptops, and single-board computers.
-- Learn about <strong>post-installation steps</strong> for popular Linux distributions like <strong>Ubuntu</strong>, <strong>Fedora</strong>, and <strong>Debian</strong>.
-- Explore <strong>open source tools</strong> for productivity, security, and development.</p>
-<h5 id="2_open_source_hardware">2. Open Source Hardware<a class="headerlink" href="#2_open_source_hardware" title="Permanent link">⚓︎</a></h5>
-<p>The revolution in open hardware is transforming how we approach electronics. We focus on:
-- <strong>Arduino</strong>: Dive into the world of microcontrollers with Arduino, learning how to build everything from simple sensors to complex projects.
-- <strong>Raspberry Pi</strong>: A powerful yet affordable platform for prototyping, home automation, and educational projects. Learn how to set up and build various projects with Raspberry Pi.
-- <strong>ESP32 and ESP8266</strong>: Explore IoT with these low-cost, Wi-Fi-enabled microcontrollers that are perfect for smart devices.</p>
-<h5 id="3_electronics_and_diy_projects">3. Electronics and DIY Projects<a class="headerlink" href="#3_electronics_and_diy_projects" title="Permanent link">⚓︎</a></h5>
-<p>Building things with your hands is at the core of the maker movement. We provide guides and projects for:
-- <strong>Electronic circuits</strong>: Learn the basics of electronics, from resistors and capacitors to transistors and ICs.
-- <strong>DIY projects</strong>: Create gadgets like smart lights, security systems, and custom sensors using open hardware and open source software.</p>
-<h5 id="4_community_and_collaboration">4. Community and Collaboration<a class="headerlink" href="#4_community_and_collaboration" title="Permanent link">⚓︎</a></h5>
-<p>Open source is all about collaboration. We believe in sharing knowledge and contributing to the community. You can:
-- <strong>Contribute</strong> to our open source projects on GitHub.
-- <strong>Follow our tutorials</strong> to replicate projects and build your own creations.
-- <strong>Join our discussions</strong> on forums and GitHub issues to connect with fellow enthusiasts.</p>
-<h4 id="check_out_our_youtube_channel">Check Out Our YouTube Channel<a class="headerlink" href="#check_out_our_youtube_channel" title="Permanent link">⚓︎</a></h4>
-<p>We regularly post tutorials, reviews, and projects on our <strong><a href="https://www.youtube.com/@electro-gamma">Electro Gamma YouTube Channel</a></strong>. Subscribe to stay updated with our latest content on Linux, Arduino, Raspberry Pi, and more!</p>
-<p><a href="https://www.youtube.com/@electro-gamma"><img alt="banar" src="Electro-Gamma/assets/banar.jpg"></a></p>
-<p><a class="md-button md-button--primary" href="https://www.youtube.com/@electro-gamma?sub_confirmation=1">Subscribe </a></p>
-<h4 id="join_us">Join Us<a class="headerlink" href="#join_us" title="Permanent link">⚓︎</a></h4>
-<p>We welcome anyone interested in open technology, whether you are a beginner or an expert. Stay tuned for more tutorials, guides, and projects, and don’t forget to contribute your ideas!</p>
-<p>Together, we can build a future where technology is open, accessible, and collaborative.</p>
-<h4 id="latest_posts"><ins>Latest Posts</ins><a class="headerlink" href="#latest_posts" title="Permanent link">⚓︎</a></h4></div>
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">pos</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">180</span><span class="p">;</span><span class="w"> </span><span class="n">pos</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">myServo</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">pos</span><span class="p">);</span>
+<span class="w">    </span><span class="n">delay</span><span class="p">(</span><span class="mi">15</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">180</span><span class="p">;</span><span class="w"> </span><span class="n">pos</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">pos</span><span class="o">--</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">myServo</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">pos</span><span class="p">);</span>
+<span class="w">    </span><span class="n">delay</span><span class="p">(</span><span class="mi">15</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h5 id="explanation">Explanation<a class="headerlink" href="#explanation" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li><strong>Servo.h</strong>: Library for controlling servo motors.</li>
+<li><strong>myServo.attach()</strong>: Specifies the pin connected to the servo.</li>
+<li><strong>myServo.write()</strong>: Sets the servo position.</li>
+</ul>
+<h5 id="additional_notes">Additional Notes<a class="headerlink" href="#additional_notes" title="Permanent link">⚓︎</a></h5>
+<ul>
+<li>Ensure the servo is connected to a PWM-capable pin (e.g., pin 9).</li>
+<li>The <strong>delay(15)</strong> function controls the speed of the servo movement.</li>
+</ul></div>
 
-
-
-
-
-
-
-
-
-
-
-
-                
               </article>
             </div>
           
@@ -933,10 +861,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.instant", "navigation.indexes", "content.code.copy"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.indexes", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../assets/javascripts/bundle.3220b9d7.min.js"></script>
       
     
   </body>
