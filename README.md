@@ -24,5 +24,9 @@ A personal website where I share my journey, blog posts, and project updates. [C
 ## 🤝 How to Reach Me
 - [GitHub](https://github.com/Electro-Gamma)
 - [Email](mailto:youremail@example.com)
+## ✨ Code Stats
 
+  <p align = "center">
+    <img align="center" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=Electro-Gamma&langs_count=10&layout=compact&theme=material-palenight&hide_border=true&bg_color=000000&title_color=5C9E31&icon_color=F8D866" height="180em" />
+  </p>
 Feel free to explore my repositories, give feedback, or collaborate with me!
