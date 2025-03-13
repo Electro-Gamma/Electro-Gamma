@@ -11,59 +11,37 @@ I love **experimenting** with new technologies, developing **innovative solution
 
 - 💡 **I build, break, and innovate.**  
 - 🛠️ **My projects revolve around embedded systems, microcontrollers, and automation.**  
-- 🎯 **Focused on Python, Raspberry Pi, ESP32, IoT, and network security.**  
+- 🎯 **Focused on software, hardware, IoT, and cybersecurity.**  
 - 🚀 **Always exploring new tech and open-source solutions!**  
 
 ---
 
 ## 🛠️ My Projects
 
-### 📡 **Access Point Management Tool**
-A **Python-based** script for managing **Wi-Fi access points**, simplifying network setup and control.
+### 📡 **Network & Security Tools**
+Building **network utilities** and **security-related tools** for various applications.
 
-### 🔌 **Microcontroller & IoT Projects**
-Innovative projects using **Arduino, Raspberry Pi, ESP8266, ESP32, and Banana Pi** for smart automation.
-
-### 🛜 **Cybersecurity & Network Tools**
-Scripts and utilities focused on **network security, penetration testing, and automation.**
+### 🔌 **Embedded Systems & IoT**
+Working on **low-level programming**, **microcontrollers**, and **real-time systems**.
 
 ### 🏎️ **Computer Vision & AI**
-Projects using **OpenCV, YOLOv8, and object tracking** for applications like **license plate recognition** and **egg detection**.
+Developing **intelligent systems** for **object detection, tracking, and automation**.
 
 ### 🛰️ **Software-Defined Radio (SDR)**
-Exploring **radio frequency (RF) analysis**, **IMSI catching**, and **signal processing** with SDR.
+Exploring **radio frequency analysis**, **signal processing**, and **wireless security**.
 
-### 💡 [Electro-Gamma GitHub Pages](https://github.com/Electro-Gamma/)
-A **personal website** where I share my journey, **blog posts**, and **project updates**.  
-[Check it out here!](https://electro-gamma.github.io/Electro-Gamma/)
+### 💡 **More Projects**
+Check out my **GitHub repositories** for a wide range of **software, hardware, and AI** projects.
 
 ---
 
 ## 🌱 What I’m Learning
 
-🚀 **Embedded Systems & Hardware Programming**  
-  - Working with **Raspberry Pi, Banana Pi, ESP8266, ESP32**, and **microcontrollers**.  
-  - Optimizing **low-level firmware development** and **real-time systems**.  
-
-🐍 **Advanced Python Scripting**  
-  - Developing **high-performance Python scripts** for **automation, networking, and AI**.  
-  - **FFmpeg & OpenCV** for real-time **video and audio processing**.  
-
-🛜 **IoT & Wireless Communications**  
-  - Building **IoT systems** with **MQTT, ESP8266, and ESP32**.  
-  - Developing **network security tools** for **Wi-Fi hacking & access point management**.  
-
+🚀 **Embedded Systems & Hardware Development**  
+🐍 **Advanced Python & Automation**  
+🖧 **IoT, Networking & Security**  
 🎯 **Computer Vision & AI**  
-  - Training **YOLOv8 models** for **object detection** (e.g., **egg counting, license plate recognition**).  
-  - Implementing **real-time tracking** using **OpenCV DNN and ONNX**.  
-
-📡 **Software-Defined Radio (SDR) & Signal Processing**  
-  - Experimenting with **IMSI catching, RF signal decoding, and SDR hacking**.  
-  - Using **SDR tools** for **real-time frequency analysis and signal monitoring**.  
-
-🛠 **Cybersecurity & Ethical Hacking**  
-  - **Pentesting & Red Teaming** with **network security tools**.  
-  - **IMEI & IMSI tracking** for **forensics & telecom security research**.  
+📡 **SDR & Signal Processing**  
 
 ---
 
